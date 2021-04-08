@@ -7,4 +7,3 @@ const db = new Tedis({
 	port: 6379
 });
 
-function 
