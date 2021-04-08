@@ -1,13 +1,24 @@
 <script>
-	import Counter from '$lib/Counter.svelte';
+	
+	import Register from '$lib/Register.svelte';
+	import Login from '$lib/Login.svelte';
+	import { goto } from '$app/navigation';
+
+	const redirectToDashboard = () => {
+		goto('/dashboard');
+	};
 </script>
 
 <main>
-	<h1>Hello world!</h1>
-
-	<Counter />
-
-	<p>Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte apps.</p>
+	<h1>Plataforma Home Office!</h1>
+	<p>
+		<Register on:success={redirectToDashboard} />
+	</p>
+	<p>
+		<Login on:success={redirectToDashboard} />
+	</p>
+	
+	<slot />
 </main>
 
 <style>
