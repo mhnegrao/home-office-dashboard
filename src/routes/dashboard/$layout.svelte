@@ -2,10 +2,11 @@
 	import '../../app.css';
 </script>
 
-
-<style>
-	.main{
-		background-color: azure;
-	}
-</style>
+<svelte:head>
+	<style>
+		.main{
+			background-color: azure;
+		}
+	</style>
+</svelte:head>
 <slot />
